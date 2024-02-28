@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ಬಂತು ಬಂತು !!!</title>
+<style>
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#clockContainer {
+    animation: slideIn 1s ease-in-out forwards;
+}
+</style>
+<script>
+function updateClock() {
+    var targetTime = new Date('2024-02-29T00:00:00+05:30').getTime(); // February 29th, 2024, 12:00 AM IST
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var timeDiff = targetTime - now;
+
+        if (timeDiff <= 0) {
+            clearInterval(x);
+            document.getElementById("clock").innerHTML = "ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಶಯ ನನ್ನೊಲವೆ";
+        } else {
+            var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        }
+    }, 1000);
+}
+</script>
+</head>
+<body onload="updateClock()">
+<div id="clockContainer" style="text-align:center;">
+    <h1>ಬಂತು ಬಂತು !!!</h1>
+    <h1 id="clock"></h1>
+</div>
+</body>
+</html>

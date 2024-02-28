@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ಬಂತು ಬಂತು !!!</title>
+<style>
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#clockContainer {
+    animation: slideIn 1s ease-in-out forwards;
+}
+</style>
+<script>
+function updateClock() {
+    var targetTime = new Date('2024-02-29T00:00:00+05:30').getTime(); // February 29th, 2024, 12:00 AM IST
+
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var timeDiff = targetTime - now;
+
+        if (timeDiff <= 0) {
+            clearInterval(x);
+            document.getElementById("clock").innerHTML = "ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಶಯ ನನ್ನೊಲವೆ";
+        } else {
+            var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+            document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        }
+    }, 1000);
+}
+</script>
+</head>
+<body onload="updateClock()">
+<div id="clockContainer" style="text-align:center;">
+    <h1>ಬಂತು ಬಂತು !!!</h1>
+    <h1 id="clock"></h1>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಶಯಗಳು ಗುಬ್ಬೂ ಮಾ !!!</title>
+    <style>
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .floral-border {
+            border: 5px solid transparent;
+            border-image: url('https://i.imgur.com/lpA1DWe.png') 30 round;
+            padding: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body onload="updateClock()">
+    <h1 style="text-align: center; animation: slideIn 1s ease-in-out forwards;">ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಶಯಗಳು ಗುಬ್ಬೂ ಮಾ !!!</h1>
+    <div id="passwordForm" style="text-align: center;">
+        <label for="password">Enter password: </label>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="checkPassword()">Submit</button>
+    </div>
+    <div id="message" class="floral-border hidden" style="max-width: 800px; margin: 20px auto; padding: 20px;">
+        
+<p style="font-family: cursive; font-size: 18px; background-color: lightpink; padding: 10px;">
+Happy birthday, my love! I want to express my deepest gratitude to Mother Nature for blessing me with such an incredible partner like you. You are truly beautiful both inside and out, and I am incredibly thankful for your presence in my life. Reflecting on our journey together, I realize that meeting you has been the most significant moment of my life. You are not only the most precious gift but also my greatest accomplishment. My only wish for you is to experience boundless happiness and joy. Embrace life to the fullest, as you are destined for greatness. I am immensely proud of everything you do, and you continue to inspire and amaze me every single day. Happy birthday once again to the most amazing person in my life. I love you endlessly, my darling.
+</p>
+
+    </div>
+
+    <script>
+        function updateClock() {
+            var targetTime = new Date('2024-02-29T00:00:00+05:30').getTime(); // February 29th, 2024, 12:00 AM IST
+            var x = setInterval(function() {
+                var now = new Date().getTime();
+                var timeDiff = targetTime - now;
+                if (timeDiff <= 0) {
+                    clearInterval(x);
+                    document.getElementById("clock").innerHTML = "ಹುಟ್ಟು ಹಬ್ಬದ ಶುಭಾಶಯ ನನ್ನೊಲವೆ";
+                    document.getElementById("message").classList.remove("hidden");
+                } else {
+                    var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                    document.getElementById("clock").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+                }
+            }, 1000);
+        }
+
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "Basu143Shillu") {
+                document.getElementById("message").classList.remove("hidden");
+                document.getElementById("passwordForm").classList.add("hidden");
+            } else {
+                alert("ಪಾಸ್ವರ್ಡ್ ತಪ್ಪಿದೆ ಗುಬ್ಬಚ್ಚಿ");
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .floral-border {
+            border: 20px solid transparent;
+            border-image-source: url('C:/Users/basav/SHillu/photos/istockphoto-1413867157-640x640.jpg');
+            border-image-slice: 20;
+            border-image-repeat: round;
+            padding: 20px;
+            max-width: calc(100% - 40px); /* Adjusted width to accommodate border */
+            position: relative;
+            margin-bottom: 20px; /* Add margin between images */
+        }
+        .floral-border img {
+            max-width: 100%;
+            display: block; /* Ensure images don't overlap */
+        }
+        .overlay-text {
+            position: absolute;
+            top: 10px; /* Adjust the position of the text */
+            left: 10px; /* Adjust the position of the text */
+            color: darkred;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px black;
+            z-index: 1; /* Ensure text is above images */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floral-border">
+        <img src="C:/Users/basav/SHillu/photos/Screenshot 2024-02-28 112740.png" alt="ಮೊದಲಾ ಸಲ">
+        <div class="overlay-text">ಮೊದಲಾ ಸಲ</div>
+    </div>
+
+    <div class="floral-border">
+        <img src="C:/Users/basav/SHillu/photos/1st bday wish.png" alt="Our first bday together">
+        <div class="overlay-text">Our first bday together</div>
+    </div>
+
+    <div class="floral-border">
+        <img src="C:/Users/basav/SHillu/photos/2nd bday wish.png" alt="Our second bday">
+        <div class="overlay-text">Our second bday</div>
+    </div>
+
+    <div class="floral-border">
+        <img src="C:/Users/basav/SHillu/photos/3rd bday.jpg" alt="Our third together">
+        <div class="overlay-text">Our third together</div>
+    </div>
+
+    <div class="floral-border">
+        <img src="C:/Users/basav/SHillu/photos/4th bday.png" alt="Our fourth together">
+        <div class="overlay-text">Our fourth together</div>
+    </div>
+
+    <div class="floral-border">
+        <img src="C:/Users/basav/SHillu/photos/day before chat.png" alt="ಗೆಳತೀ ಗುಬ್ಬೂ ನ ಕೊನೆಯ ಸಂದೇಶ">
+        <div class="overlay-text">ಗೆಳತೀ ಗುಬ್ಬೂ ನ ಕೊನೆಯ ಸಂದೇಶ</div>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ಗುಬ್ಬಚ್ಚಿ ಗೂಡು</title>
+    <h1>ಗುಬ್ಬಚ್ಚಿ ಗೂಡು</h1>
+</head>
+<body>
+<a href="C:/Users/basav/SHillu/photos/IMG-20211106-WA0001.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20211106-WA0002.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220315-WA0000.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220410-WA0055.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220606-WA0003.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220606-WA0005.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220606-WA0006.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220606-WA0007.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220821-WA0011.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20220823-WA0009.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20230221-WA0010.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20230221-WA0018.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20230730-WA0003.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20231022-WA0051.jpg" target="_blank">Photo link</a><br>
+<a href="C:/Users/basav/SHillu/photos/IMG-20231022-WA0052.jpg" target="_blank">Photo link</a><br>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Video Access</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .video-container {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Enter Password to Access Video</h2>
+    <form action="#" method="post" onsubmit="return validatePassword()">
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="error-message" style="color: red; display: none;">ತಪ್ಪು ಪಾಸ್ವರ್ಡ್ ಗುಬ್ಬೂ</p>
+</div>
+
+<div class="video-container" id="video-container" style="display: none;">
+    <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<script>
+    function validatePassword() {
+        var password = document.getElementById('password').value;
+        // Replace 'Basu143Shillu' with the actual password
+        if (password !== 'Basu143Shillu') {
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('video-container').style.display = 'none';
+            return false;
+        }
+        // If password is correct, show the video container and set the src of the iframe
+        document.getElementById('error-message').style.display = 'none';
+        document.getElementById('video-container').style.display = 'block';
+        document.querySelector('#video-container iframe').src = "https://www.youtube.com/embed/vyHnZHdPSqE";
+        return false; // Prevent form submission
+    }
+</script>
+</body>
+</html>

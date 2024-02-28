@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Secure Video Access</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .video-container {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Enter Password to Access Video</h2>
+    <form action="#" method="post" onsubmit="return validatePassword()">
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="error-message" style="color: red; display: none;">ತಪ್ಪು ಪಾಸ್ವರ್ಡ್ ಗುಬ್ಬೂ</p>
+</div>
+
+<div class="video-container" id="video-container" style="display: none;">
+    <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+<script>
+    function validatePassword() {
+        var password = document.getElementById('password').value;
+        // Replace 'Basu143Shillu' with the actual password
+        if (password !== 'Basu143Shillu') {
+            document.getElementById('error-message').style.display = 'block';
+            document.getElementById('video-container').style.display = 'none';
+            return false;
+        }
+        // If password is correct, show the video container and set the src of the iframe
+        document.getElementById('error-message').style.display = 'none';
+        document.getElementById('video-container').style.display = 'block';
+        document.querySelector('#video-container iframe').src = "https://www.youtube.com/embed/vyHnZHdPSqE";
+        return false; // Prevent form submission
+    }
+</script>
+</body>
+</html>
